@@ -9,11 +9,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ User }) {
       // define association here
-      // userId
+      // 'user' jadi pengganti object saat mengambil relasi ini
       this.belongsTo(User, { foreignKey: 'userId', as: 'user' })
     }
 
     toJSON() {
+      //hide id & userId column when fetched
       return { ...this.get(), id: undefined, userId: undefined }
     }
   }

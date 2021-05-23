@@ -8,11 +8,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ Post }) {
-      // define association here
+      /**
+       * define Relation here
+       */
+
+      // 'posts' jadi pengganti object saat mengambil relasi ini
       this.hasMany(Post, { foreignKey: 'userId', as: 'posts' })
     }
 
     toJSON() {
+      // hide id column when data fetched
       return { ...this.get(), id: undefined }
     }
   }
