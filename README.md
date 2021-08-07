@@ -11,8 +11,8 @@
 - make sure the node JS is installed
 - clone this repo as well as it must be
 - Run `npm install` on your terminal
-- copy file config.example.json with "config.json" and adjust your own Database setting inside it
-- be prepared for the Database according to config.json
+- copy file config.example.json with "config.json" (keep in the same directory) and adjust your own Database setting inside it
+- be prepared for the Database according to "config.json" (development object)
 - Run `sequelize db:migrate` on your terminal (if you wanna copy the Database structure)
 - Run `npm run dev` on your terminal (to run server)
 
